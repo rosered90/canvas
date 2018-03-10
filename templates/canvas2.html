@@ -1,0 +1,89 @@
+<!--html-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>WebChat JieTiGame</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/mycss.css" />
+
+    <style>
+        canvas{display:block;}
+
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        html,body{
+            height:100%;
+            width:100%;
+        }
+    </style>
+
+</head>
+<body>
+<canvas id="game" width="768" height="400">
+    <!--Sorry,your web browser does not support Canvas context.-->
+</canvas>
+
+<script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js";></script>
+<script src="js/myjs.js"></script>
+<script>
+    function drawCircle(ctx,x,y,Radius){
+        ctx.fillStyle = "rgba(255,0,0,.9)";
+        ctx.beginPath();
+        ctx.arc(x,y,Radius,0,Math.PI*2,true);
+        ctx.closePath();
+        ctx.fill();
+    }
+
+    $(document).ready(function(){
+        var canvas = $("#game");
+        var ctx = canvas.get(0).getContext("2d");
+        var circleRadius = 10;
+        $(window).resize(resizeCanvas);
+        var yImg=new Image(); //插入图片
+        yImg.src="dog.png";
+        yImg.onload=function(){
+            draw(this);
+        };
+        function draw(obj){
+            canvas.attr("width",$(window).get(0).innerWidth);
+            canvas.attr("height",$(window).get(0).innerHeight);
+
+            (0,0,canvas.width(),canvas.height());
+            var width = canvas.get(0).width - 20;
+            var height = canvas.get(0).height - 20;
+            var circleCount = 30;
+            for (var i=0; i<circleCount; i++) {
+                var x = 10 + Math.random() * width;
+                var y = 10 + Math.random() * height;
+                ctx.drawImage(obj, x, y, 40, 40);//插入图片
+            };
+        };
+
+        function resizeCanvas(){
+//            ctx.fillStyle = "red";
+            canvas.attr("width",$(window).get(0).innerWidth);
+            canvas.attr("height",$(window).get(0).innerHeight);
+
+            (0,0,canvas.width(),canvas.height());
+            var width = canvas.get(0).width - 20;
+            var height = canvas.get(0).height - 20;
+            var circleCount = 20;
+            for (var i=0; i<circleCount; i++){
+                var x = 10 + Math.random()*width;
+                var y = 10 + Math.random()*height;
+                drawCircle(ctx,x,y,0);
+
+            }
+        }
+
+        resizeCanvas();
+
+    });
+
+</script>
+
+</body>
+</html>

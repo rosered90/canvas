@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>狗年快乐哦！</title>
+    <meta http-equiv="refresh" content="10">
+    <style>
+
+        /*用来控制图像的时间*/
+        /*速度最快*/
+        .halo-1 {
+            animation: display_light 3s  infinite linear; /*不透明度数值变小,图片逐渐消失*/
+            -moz-animation: display_light 3s  infinite linear;/* Firefox */
+            -webkit-animation: display_light 3s  infinite linear; /* Safari 和 Chrome */
+            -o-animation: display_light 3s  infinite linear; /* Opera */
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-delay: 0.3s;
+        }
+
+        /*中等*/
+        .halo-2 {
+            animation: display_light 4s  infinite linear; /*不透明度数值变小,图片逐渐消失*/
+            -moz-animation: display_light 4s  infinite linear;/* Firefox */
+            -webkit-animation: display_light 4s  infinite linear; /* Safari 和 Chrome */
+            -o-animation: display_light 4s  infinite linear; /* Opera */
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-delay: 0.3s;
+        }
+
+        /*最慢*/
+        .halo-3 {
+            animation: display_light 5s  infinite linear; /*不透明度数值变小,图片逐渐消失*/
+            -moz-animation: display_light 5s  infinite linear;/* Firefox */
+            -webkit-animation: display_light 5s  infinite linear; /* Safari 和 Chrome */
+            -o-animation: display_light 5s  infinite linear; /* Opera */
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-delay: 0.3s;
+        }
+        @keyframes display_light
+        {
+            0% {opacity: 0;   filter:alpha(opacity=0.6); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+            20% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.5, 0.5) ;transform: scale(0.5, 0.5);}
+            40% {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.7, 0.7) ;transform: scale(0.7, 0.7);}
+            60% {opacity: 0.9;   filter:alpha(opacity=0.9); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+            80% {opacity: 0.5;    filter:alpha(opacity=0.5); -webkit-transform: scale(1.1, 1.1) ;transform: scale(1.1, 1.1);}
+            100% {opacity: 0;   filter:alpha(opacity=0);-webkit-transform: scale(1.3, 1.3) ;transform: scale(1.3, 1.3);}
+        }
+        @-moz-keyframes display_light /* Firefox */
+        {
+            0% {opacity: 0;   filter:alpha(opacity=0.60); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+            20% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.5, 0.5) ;transform: scale(0.5, 0.5);}
+            40% {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.7, 0.7) ;transform: scale(0.7, 0.7);}
+            60% {opacity: 0.9;   filter:alpha(opacity=0.9); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+            80% {opacity: 0.5;    filter:alpha(opacity=0.5); -webkit-transform: scale(1.1, 1.1) ;transform: scale(1.1, 1.1);}
+            100% {opacity: 0;   filter:alpha(opacity=0);-webkit-transform: scale(1.3, 1.3) ;transform: scale(1.3, 1.3);}
+        }
+        @-webkit-keyframes display_light /* Safari 和 Chrome */
+        {
+            0% {opacity: 0;   filter:alpha(opacity=0.60); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+            20% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.5, 0.5) ;transform: scale(0.5, 0.5);}
+            40% {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.7, 0.7) ;transform: scale(0.7, 0.7);}
+            60% {opacity: 0.9;   filter:alpha(opacity=0.9); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+            80% {opacity: 0.5;    filter:alpha(opacity=0.5); -webkit-transform: scale(1.1, 1.1) ;transform: scale(1.1, 1.1);}
+            100% {opacity: 0;   filter:alpha(opacity=0);-webkit-transform: scale(1.3, 1.3) ;transform: scale(1.3, 1.3);}
+        }
+        @-o-keyframes display_light /* Opera */
+        {
+            0% {opacity: 0;   filter:alpha(opacity=0.60); -webkit-transform: scale(0.2, 0.2) ;transform: scale(0.2, 0.2);}
+            20% {opacity: 0.2;   filter:alpha(opacity=0.2); -webkit-transform: scale(0.5, 0.5) ;transform: scale(0.5, 0.5);}
+            40% {opacity: 0.6;   filter:alpha(opacity=0.6);-webkit-transform: scale(0.7, 0.7) ;transform: scale(0.7, 0.7);}
+            60% {opacity: 0.9;   filter:alpha(opacity=0.9); -webkit-transform: scale(0.9, 0.9) ;transform: scale(0.9, 0.9);}
+            80% {opacity: 0.5;    filter:alpha(opacity=0.5); -webkit-transform: scale(1.1, 1.1) ;transform: scale(1.1, 1.1);}
+            100% {opacity: 0;   filter:alpha(opacity=0);-webkit-transform: scale(1.3, 1.3) ;transform: scale(1.3, 1.3);}
+        }
+
+    </style>
+    <script src="http://cdn.bootcss.com/jquery/3.0.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="pancontainer " data-orient="center">
+        <img  src="dog.png" alt="pic"  style="position: absolute;width:100px;height:100px;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img  src="dog.png" alt="pic"  style="position: absolute;"/>
+        <img src="dog.png" alt="pic"  style="position: absolute;"/>
+
+    </div>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        $(".pancontainer img").each(function () {
+            var MaxWidth = 100;//原图像的宽和高
+            var ScreenWidth = $(window).width();//屏幕的宽度
+            var ScreenHeight = $(window).height();
+            $(this).css('width', MaxWidth); //图像的宽和高
+            $(this).css('height', MaxWidth);
+            $(this).css('opacity', 0);
+
+            var temp_width=Math.random()*ScreenWidth;//产生图片距离屏幕左边的随机宽度
+            var temp_heigh=Math.random()*ScreenHeight;//随机高度
+            if (temp_width >= ScreenWidth-100){//判断图像是否超过屏幕
+                temp_width = temp_width - 180;
+            }
+            if (temp_heigh >= ScreenHeight-100){
+                temp_heigh = temp_heigh - 180;
+            }
+            $(this).css("left",temp_width);//把位置宽写入css中
+            $(this).css("top",temp_heigh);
+            var ClassNum = parseInt(Math.random()*3)+1; //随机生成1-3的数字
+            $(this).addClass('halo-'+ClassNum);//为每个img添加不同时间的class
+
+        });
+
+    }
+</script>
+</html>
